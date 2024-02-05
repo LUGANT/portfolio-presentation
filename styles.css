@@ -1,12 +1,32 @@
 :root{
-    font-size: 20px;
+    /* font-size: 20px; */
     font-family: 'Courier New', Courier, monospace;
+    color: white;
+    background-color: #040D12;
+    --background-color: #040D12;
+    --background-color_two: #0a212d;
+    --title-color: #5C8374;
+    --body-color: #93B1A6;
+    color: var(--body-color);
 }
 
 body{
     margin: 0;
     width: 100vw;
     height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.font-color-title{
+    color: var(--title-color)
+}
+
+.font-color-body{
+    color: var(--body-color)
 }
 
 .container{
@@ -38,9 +58,9 @@ body{
 }
 
 .aside{
-    width: 40%;
+    width: 35%;
     height: 100%;
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 .aside-container{
@@ -56,15 +76,18 @@ body{
 }
 
 .main-container{
-    width: 60%;
+    width: 65%;
     height: 100%;
-    background-color: red;
+    /* background-color: red; */
+    overflow-y:scroll;
+}
 
-    overflow-y: auto;
+.main-container::-webkit-scrollbar {
+    width: 0px;
 }
 
 .image-cropped-profile{
-    width: 300px;
+    width: 200px;
     
     object-fit: contain;
 
@@ -87,6 +110,47 @@ body{
     font-size: 1.75rem;
 }
 
+.icon-programming-language-c{
+    width: 48px;
+    height: 50px;
+}
+
+.icon-programming-language{
+    width: 50px;
+    height: 50px;
+}
+
+.icon-springboot{
+    width: 100px;
+    height: 40px;
+}
+
+.icon-mysql{
+    width: 80px;
+    height: 40px;
+}
+
 .info-container{
     padding: 50px;
+}
+
+.globes-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.globe{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+
+    border: 1px solid var(--title-color);
+    border-radius: 15px;
+}
+
+.globe:hover{
+    background-color: var(--background-color_two);
+
+    transition: 0.3s;
 }
