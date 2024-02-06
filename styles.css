@@ -151,6 +151,32 @@ a {
 
 .globe:hover{
     background-color: var(--background-color_two);
+    transition: 0.5s;
+    transition-timing-function: ease;
+}
 
+.index-container{
+    display: flex;
+    flex-direction: column;
+    padding-block: 20px;
+    gap: 5px;
+}
+
+.index-hover:hover{
+    color: var(--body-color);
     transition: 0.3s;
 }
+
+.shadow-profile{
+    box-shadow: rgba(92, 131, 116, 0.15) 0px 0px 50px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+body {
+    animation: fadeIn 1s;
+}
+
